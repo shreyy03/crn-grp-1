@@ -1,0 +1,40 @@
+name: Auto-Generate Documentation List
+
+# 1. When should this action run?
+on:
+  push:
+    branches:
+      - main # Change this to 'master' if your main branch is called master
+    paths:
+      - '**/*.md' # Only run when Markdown files change
+      - 'generate_files.py'
+
+jobs:
+  update-list:
+    runs-on: ubuntu-latest
+    
+    # Give the action permission to push code back to your repo
+    permissions:
+      contents: write
+
+    steps:
+      # Step A: Check out your code onto the GitHub server
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step B: Install Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # Step C: Run your script to generate files.js
+      - name: Run generator script
+        run: python generate_files.py
+
+      # Step D: Commit and push the new files.js back to your repo
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Auto-update files.js with new documentation"
+          file_pattern: files.js
