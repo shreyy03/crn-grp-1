@@ -146,9 +146,9 @@ The `model.predict()` method returns a dictionary:
 
 The system can process both images and videos frame-by-frame. Result videos display the model's predictions overlaid on each frame. Sample results are available in the `results/` directory.
 
-![Result video](https://github.com/sagaryadavv/hr-report-dashboard/blob/main/output_fire.gif)
+![Result video](https://github.com/sagaryadavv/hr-report-dashboard/blob/main/output_fire.gif?raw=true)
 
-![Result video](https://github.com/sagaryadavv/hr-report-dashboard/blob/main/output_fight.gif)
+![Result video](https://github.com/sagaryadavv/hr-report-dashboard/blob/main/output_fight.gif?raw=true)
 
 > [!TIP]
 > **Extending the Model**: To detect new suspicious scenarios (e.g., "shoplifting", "vandalism"), simply add a descriptive text label to `settings.yaml` under the `labels` key. The CLIP model's zero-shot capability allows it to generalize to new categories without any additional training.
