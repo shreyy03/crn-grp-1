@@ -1,6 +1,10 @@
 const documentationFiles = [
     {
         "category": "person-reid",
+        "path": "./person-reid/CLIP-ReID_Video_Inference_Guide.md"
+    },
+    {
+        "category": "person-reid",
         "path": "./person-reid/Person_reID_baseline_pytorch-master.md"
     },
     {
