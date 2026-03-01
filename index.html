@@ -529,7 +529,20 @@
                 const response = await fetch(path);
                 if (response.ok) {
                     const markdownText = await response.text();
-                    viewer.innerHTML = marked.parse(markdownText);
+
+                    // Fix relative image paths manually since marked.js doesn't handle them relative to source
+                    const baseDir = path.substring(0, path.lastIndexOf('/') + 1);
+                    const fixedMarkdown = markdownText.replace(/!\[(.*?)\]\((?!http|https|\/)(.*?)\)/g, (match, alt, imgPath) => {
+                        // If it starts with ../ resolve it
+                        let resolvedPath = baseDir + imgPath;
+                        // Basic resolution for ../
+                        while (resolvedPath.includes('/../')) {
+                            resolvedPath = resolvedPath.replace(/[^\/]+\/\.\.\//, '');
+                        }
+                        return `![${alt}](${resolvedPath})`;
+                    });
+
+                    viewer.innerHTML = marked.parse(fixedMarkdown);
                 } else {
                     viewer.innerHTML = `<h2>Error 404</h2><p>Could not find the document at <code>${path}</code>.</p>`;
                 }
