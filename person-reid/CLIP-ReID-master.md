@@ -16,7 +16,7 @@ The pipeline implements an advanced tracking-by-detection framework:
 
 ## 2. Method
 
-The core of this system is the **CLIP-ReID** model, which translates pedestrian images into 768-dimensional feature vectors.
+The core of this system is the **CLIP-ReID** model, which translates pedestrian images into 768-dimensional feature vectors. **CLIP (Contrastive Language-Image Pre-training)** is an OpenAI-developed model that aligns images with natural language descriptions in a shared feature space, enabling a deeper "semantic" understanding of person appearance than traditional CNNs.
 
 ### Key Technical Enhancements:
 - **Vision Transformer (ViT)**: Captures global context, making it more resilient to occlusions compared to standard CNNs.

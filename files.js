@@ -5,7 +5,7 @@ const documentationFiles = [
     },
     {
         "category": "person-reid",
-        "path": "./person-reid/CLIP-ReID_Video.md"
+        "path": "./person-reid/CLIP-ReID-master.md"
     },
     {
         "category": "person-reid",
