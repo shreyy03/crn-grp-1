@@ -115,7 +115,7 @@ The output video will display:
 - **ID Tags**: A persistent ID (e.g., "ID 1", "ID 2") that stays locked to the individual.
 - **Score Logging**: Console output showing the matching confidence (e.g., `Match: ID 1 with score 0.945`).
 
-![alt text](image.png)
+![alt text](../assets/clip-ss.png)
 
 ![Tracking Visualization Placeholder](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2x3OWQwZ3EzMWoyeGd5MHVzbW4xeDVpamxkM3V2dW5hemV4bXVqaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Hg27IbDq6lpNKAwTeW/giphy.gif)
 
