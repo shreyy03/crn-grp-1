@@ -1,7 +1,11 @@
 const documentationFiles = [
     {
         "category": "person-reid",
-        "path": "./person-reid/CLIP-ReID_Video_Inference_Guide.md"
+        "path": "./person-reid/BPBReID_P.md"
+    },
+    {
+        "category": "person-reid",
+        "path": "./person-reid/CLIP-ReID_Video.md"
     },
     {
         "category": "person-reid",
